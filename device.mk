@@ -20,12 +20,9 @@
 # Everything in this directory will become public
 
 # ro.product.first_api_level indicates the first api level the device has commercially launched on.
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=19
-    
-# bluetooth: Add aptX & aptXHD for confirmed platforms  
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.bt.enableAptXHD=true
 
 PRODUCT_COPY_FILES += \
     device/lge/hammerhead/init.hammerhead.rc:root/init.hammerhead.rc \
@@ -214,10 +211,6 @@ PRODUCT_PACKAGES += \
 # Thermal HAL
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl
-
-# Doze mode
-PRODUCT_PACKAGES += \
-    HammerheadDoze
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
