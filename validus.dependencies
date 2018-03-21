@@ -7,9 +7,9 @@
   },
   {
     "remote": "github",
-    "repository": "DirtyUnicorns/android_vendor_lge",
-    "target_path": "vendor/lge",
-    "branch": "o8x"
+    "repository": "BigTopKrazies/vendor_lge_hammerhead",
+    "target_path": "vendor/lge/hammerhead",
+    "branch": "8.1"
   }
 ]
 
