@@ -19,12 +19,6 @@
 #
 # Everything in this directory will become public
 
-# Kernel Inline
-TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
-TARGET_KERNEL_CONFIG := unicornblood_defconfig
-TARGET_VARIANT_CONFIG := unicornblood_defconfig
-TARGET_SELINUX_CONFIG := unicornblood_defconfig
-
 # ro.product.first_api_level indicates the first api level the device has commercially launched on.
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=19

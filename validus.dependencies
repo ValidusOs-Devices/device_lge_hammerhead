@@ -1,9 +1,9 @@
 [
   {
     "remote": "github",
-    "repository":  "DirtyUnicorns/android_kernel_lge_hammerhead",
+    "repository":  "Unlegacy-Android/android_kernel_lge_hammerhead",
     "target_path": "kernel/lge/hammerhead",
-    "branch": "o8x"
+    "branch": "stable"
   },
   {
     "remote": "github",
