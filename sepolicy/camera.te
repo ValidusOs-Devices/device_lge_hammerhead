@@ -54,6 +54,12 @@ allow camera mnt_user_file:dir { getattr read write open search };
 allow camera mnt_user_file:lnk_file { getattr read write open };
 allow camera fuse:dir { getattr read write open search };
 
+# Interact with binder HAL
 allow camera hal_camera_default:fd use;
+
+# Interact with mediacodec
+allow camera mediacodec:fd use;
+
+# Interact with untrusted apps
 allow camera untrusted_app_25:fd use;
 allow camera untrusted_app:fd use;

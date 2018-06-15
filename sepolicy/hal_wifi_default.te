@@ -1,5 +1,4 @@
+# Allow Wifi HAL access to persist_file
+allow hal_wifi_default persist_file:dir search;
 allow hal_wifi_default persist_wifi_file:dir search;
-allow hal_wifi_default persist_wifi_file:file getattr;
-allow hal_wifi_default persist_wifi_file:file read;
-allow hal_wifi_default persist_wifi_file:file open;
-allow hal_wifi_default persist_file:dir { search };
+allow hal_wifi_default persist_wifi_file:file { read getattr open };

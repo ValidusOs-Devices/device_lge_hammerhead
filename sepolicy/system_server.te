@@ -8,6 +8,12 @@ unix_socket_send(system_server, sensors, sensors)
 allow system_server sensors:unix_stream_socket sendto;
 allow system_server sensors_socket:sock_file r_file_perms;
 
+# mpdecision socket access
+unix_socket_connect(system_server, mpdecision, mpdecision)
+unix_socket_send(system_server, mpdecision, mpdecision)
+allow system_server mpdecision:unix_stream_socket sendto;
+allow system_server mpdecision_socket:dir search;
+
 # Read /data/tombstones/ramdump files.
 allow system_server ramdump_data_file:dir r_dir_perms;
 allow system_server ramdump_data_file:file r_file_perms;
@@ -26,6 +32,5 @@ allowxperm system_server self:udp_socket ioctl { SIOCSIFFLAGS SIOCDEVPRIVATE_D }
 allow system_server self:socket ioctl;
 allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
 
+# sensors_device access
 allow system_server sensors_device:chr_file getattr;
-
-allow system_server unlabeled:file unlink;

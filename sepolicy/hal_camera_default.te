@@ -1,17 +1,19 @@
-allow hal_camera_default vndbinder_device:chr_file read;
-allow hal_camera_default vndbinder_device:chr_file write;
-allow hal_camera_default vndbinder_device:chr_file open;
-allow hal_camera_default vndbinder_device:chr_file ioctl;
+# Interact with vndbinder device
+allow hal_camera_default vndbinder_device:chr_file { read write open ioctl };
+
+# Interact with camera socket
 allow hal_camera_default camera_socket:sock_file write;
 allow hal_camera_default camera:unix_dgram_socket sendto;
-allow hal_camera_default sysfs:file read;
-allow hal_camera_default sysfs:file open;
-allow hal_camera_default sysfs:file getattr;
 
-# Text relocations in libmmjpeg
+# Interact with graphics mapper hwservice
+allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
+
+# Interact with mpdecision
+allow hal_camera_default mpdecision_socket:sock_file write;
+allow hal_camera_default mpdecision:unix_dgram_socket sendto;
+
+# Interact with sysfs
+allow hal_camera_default sysfs:file { read open getattr };
+
+# Interact with vendor files
 allow hal_camera_default vendor_file:file execmod;
-allow hal_camera_default system_file:file execmod;
-
-allow hal_camera_default mediaserver:binder transfer;
-allow hal_camera_default mediaserver:binder call;
-
