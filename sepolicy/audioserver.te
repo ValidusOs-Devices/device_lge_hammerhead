@@ -1,6 +1,2 @@
 # Allow audioserver to read sysfs
-allow audioserver sysfs:file { getattr read open 
-
-allow audioserver sysfs:file read;
-allow audioserver sysfs:file open;
-allow audioserver sysfs:file getattr;
+allow audioserver sysfs:file { getattr read open };
