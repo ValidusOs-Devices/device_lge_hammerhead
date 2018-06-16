@@ -392,7 +392,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.audio.fluence.speaker=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.vc_call_vol_steps=6
+    ro.config.vc_call_vol_steps=7 \
+    ro.config.media_vol_steps=25
 
 # Setup custom emergency number list based on the MCC. This is needed by RIL
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -447,8 +448,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.enc.jpeg.quality=100 \
     ro.media.dec.jpeg.memcap=8000000 \
     ro.media.enc.hprof.vid.bps=8000000 \
-    ro.config.vc_call_vol_steps=20 \
-    ro.config.media_vol_steps=20 \
     ro.telephony.call_ring.delay=0 \
     ring.delay=0
 
