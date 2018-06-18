@@ -1,2 +1,5 @@
 # Allow audioserver to read sysfs
 allow audioserver sysfs:file { getattr read open };
+
+# /devices/soc0/hw_platform (libacdbloader.so)
+r_dir_file(audioserver, sysfs_soc)
