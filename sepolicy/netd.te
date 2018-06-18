@@ -1,2 +1,6 @@
 # Interact with sys_module
 allow netd self:capability sys_module;
+
+# Avoid a sys_module denial, despite CONFIG_MODULES=n
+dontaudit netd self:capability sys_module;
+
