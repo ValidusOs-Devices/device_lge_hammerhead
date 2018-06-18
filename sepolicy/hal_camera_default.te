@@ -17,3 +17,5 @@ allow hal_camera_default sysfs:file { read open getattr };
 
 # Interact with vendor files
 allow hal_camera_default vendor_file:file execmod;
+
+vndbinder_use(hal_camera_default)
