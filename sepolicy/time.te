@@ -15,6 +15,6 @@ allow time alarm_device:chr_file rw_file_perms;
 allow time self:socket *;
 allowxperm time self:socket ioctl msm_sock_ipc_ioctls;
 
-allow time self:capability { setuid setgid };
+allow time self:capability { setuid setgid sys_time };
 
 allow time time:capability { sys_time };
