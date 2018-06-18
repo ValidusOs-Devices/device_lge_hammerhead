@@ -2,3 +2,7 @@
 allow hal_wifi_default persist_file:dir search;
 allow hal_wifi_default persist_wifi_file:dir search;
 allow hal_wifi_default persist_wifi_file:file { read getattr open };
+
+# Reading from /persist/wifi/.macaddr
+allow hal_wifi_default persist_file:dir r_dir_perms;
+r_dir_file(hal_wifi_default, persist_wifi_file)
