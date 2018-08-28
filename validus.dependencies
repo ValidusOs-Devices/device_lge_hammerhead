@@ -7,9 +7,9 @@
   },
   {
     "remote": "github",
-    "repository": "BigTopKrazies/vendor_lge_hammerhead",
-    "target_path": "vendor/lge/hammerhead",
-    "branch": "8.1"
+    "repository": "TheMuppets/proprietary_vendor_lge",
+    "target_path": "vendor/lge",
+    "branch": "lineage-15.1"
   }
 ]
 
