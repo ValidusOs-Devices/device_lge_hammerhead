@@ -6,8 +6,8 @@ TARGET_BOOTANIMATION_HALF_RES := true
 # Inherit basic aosp junk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common GZR stuff.
+$(call inherit-product, vendor/validus/config/common_full_phone.mk)
 
 # Inherit device vendor
 $(call inherit-product-if-exists, vendor/lge/hammerhead/hammerhead-vendor.mk)
@@ -20,7 +20,7 @@ $(call inherit-product, device/lge/hammerhead/properties.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := hammerhead
-PRODUCT_NAME := lineage_hammerhead
+PRODUCT_NAME := validus_hammerhead
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 5
 PRODUCT_MANUFACTURER := LGE

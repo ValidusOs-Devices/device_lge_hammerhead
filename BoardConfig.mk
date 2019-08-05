@@ -84,10 +84,8 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS += | (1 << 25)
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
+  ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
-    endif
   endif
 endif
 DONT_DEXPREOPT_PREBUILTS := true
